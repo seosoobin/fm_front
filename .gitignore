@@ -1,15 +1,10 @@
-vue/DS_Store
-vue/node_modules/
-express/node_modules/
-vue/dist/
-vue/npm-debug.log*
-vue/yarn-debug.log*
-vue/yarn-error.log*
+DS_Store
+node_modules/
 
 # Editor directories and files
-vue/.idea
-vue/.vscode
-vue/*.suo
-vue/*.ntvs*
-vue/*.njsproj
-vue/*.sln
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
