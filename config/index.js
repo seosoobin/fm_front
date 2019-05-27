@@ -4,7 +4,7 @@ module.exports = (function (env) {
     baseUrl: 'http://localhost:3001',
   };
   var productConfig = {
-    baseUrl: 'http://tiptaptrip-api.herokuapp.com',
+    baseUrl: 'http://tornado-fm-api.herokuapp.com/',
   };
   switch (env) {
     case 'production':
