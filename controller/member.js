@@ -7,10 +7,10 @@ var member = function(){
   var _showMemberList = function (req, res, next) {
     var options = {
         method: 'GET',
-        uri: config.baseUrl+'/member',
+        uri: config.baseUrl+'/team/'+req.params.id+'/member',
         json: true
       };
-
+console.log(req.params.id);
       rp(options)
       .then(function (parsedBody) {
         var list = parsedBody.values;
@@ -18,6 +18,7 @@ var member = function(){
         res.send(list);
       })
       .catch(function (err) {
+        console.log(err);
         res.send(err);
       });
       
@@ -26,7 +27,7 @@ var member = function(){
   var _showMemberById = function (req, res, next) {
     var options = {
         method: 'GET',
-        uri: config.baseUrl+'/member/' + req.params.id,
+        uri: config.baseUrl+'/team/'+req.params.id+'/member/' + req.params.mid,
         json: true
       };
 
@@ -47,7 +48,7 @@ var member = function(){
       //   'access-token': req.session.token
       // },
       method: 'POST',
-      uri: config.baseUrl+'/member',
+      uri: config.baseUrl+'/team/'+req.params.id+'/member',
       body: req.body,
       json: true
     };      

@@ -8,8 +8,8 @@ var member = require('./sub_route/member');
 
 module.exports = function (app) {
   app.use('/', main);
-  app.use('/api/movies', movie);
-  app.use('/api/member', member);
+  //app.use('/api/movies', movie);
+  app.use('/api', member);
 
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {
