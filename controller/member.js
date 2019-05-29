@@ -10,7 +10,7 @@ var member = function(){
         uri: config.baseUrl+'/team/'+req.params.id+'/member',
         json: true
       };
-console.log(req.params.id);
+      
       rp(options)
       .then(function (parsedBody) {
         var list = parsedBody.values;
