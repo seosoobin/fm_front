@@ -8,7 +8,7 @@ var config = require('../config');
 
 module.exports = function (app) {
   app.use('/', main);
-  app.use('/team', team);
+  app.use('/api/team', team);
 
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {
