@@ -2,14 +2,13 @@
 var path = require('path');
 var createError = require('http-errors');
 var main = require('./sub_route/main');
-var movie = require('./sub_route/movies');
-var member = require('./sub_route/member');
+var team = require('./sub_route/team');
+var config = require('../config');
 
 
 module.exports = function (app) {
   app.use('/', main);
-  //app.use('/api/movies', movie);
-  app.use('/api', member);
+  app.use('/team', team);
 
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {
