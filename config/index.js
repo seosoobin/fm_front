@@ -1,23 +1,17 @@
 module.exports = (function (env) {
   var config = {};
-  var devConfig = {
-    baseUrl: 'http://localhost:3001',
-  };
-  var productConfig = {
-    baseUrl: 'http://footballmanagement-api.herokuapp.com',
-  };
   switch (env) {
     case 'production':
-      config = productConfig;
+      config = require('../env/production');
       break;
 
     case 'development':
-      config = devConfig;
+      config = require('../env/development');
       break;
 
     default:
       console.error('NODE_ENV environment variable not set. -> development');
-      config = devConfig;
+      config = require('../env/development');
       // process.exit(1);
   }
 
